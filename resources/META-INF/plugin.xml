@@ -1,0 +1,34 @@
+<idea-plugin>
+  <id>com.github.ArtsiomCh.FoldsTest</id>
+  <name>FoldsTest</name>
+  <version>0.1.0dev</version>
+  <vendor email="achapialiou@gmail.com" url="http://github.com/ArtsiomCh/FoldsTest">Artsiom Chapialiou</vendor>
+
+  <description><![CDATA[
+      Bug demonstration: open any java file with more then 2 import statements.
+    ]]></description>
+
+  <change-notes><![CDATA[
+      0.1.0 - Initial release
+    ]]></change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="191.0" until-build="191.*"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+  <depends>com.intellij.modules.java</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+    <lang.foldingBuilder language="JAVA" implementationClass="com.github.artsiomch.commentfolder.FoldsTestFoldingBuilder"/>
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+</idea-plugin>
